@@ -80,6 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel2
+                    PRUEBA DE PRUEBA
                 </div>
                 <div>
                     <img src="{{asset('images/IMG-20161222-WA0002.jpg')}}">
