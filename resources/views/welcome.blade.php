@@ -81,6 +81,9 @@
                 <div class="title m-b-md">
                     Laravel2
                 </div>
+                <div>
+                    <img src="{{asset('images/IMG-20161222-WA0002.jpg')}}">
+                </div>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
