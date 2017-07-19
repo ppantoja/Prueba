@@ -79,15 +79,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   
-                    RUEBA DE PRUEBA
+                    Laravel   
                 </div>
-                <div>
-                    <img src="{{asset('images/IMG-20161222-WA0002.jpg')}}">
-                </div>
-                <div>
-                    <img src="{{asset('images/IMG-20161222-WA0002.jpg')}}">
-                </div>
+                
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
