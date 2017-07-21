@@ -12,6 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style type="text/css">
+        .navbar-default {
+            border-color: #FF2727;
+        }
+    </style>
+
+
 </head>
 <body>
     <div id="app">
