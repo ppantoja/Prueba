@@ -490,3 +490,6 @@ Stack trace:
 #48 /var/www/Conaplan/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #49 /var/www/Conaplan/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #50 {main}  
+[2017-07-26 16:03:54] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{'' in /var/www/Conaplan/routes/web.php:15
+Stack trace:
+#0 {main}  

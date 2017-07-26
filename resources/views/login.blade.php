@@ -1,7 +1,6 @@
 @component('layouts.zamora')
 
 @slot('zamora')
-
 <style type="text/css">
 
 	.login-title-index{
@@ -63,12 +62,7 @@
 	}
 
 </style>
-
-
-
 @endslot
-
-
 
 @slot('content')
 <div class="container">
