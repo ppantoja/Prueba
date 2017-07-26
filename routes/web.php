@@ -17,6 +17,10 @@ Route::get('/', function () {
     };
 });
 
+
+Route::get('/resumen', 'HomeController@resumen')->name('resumen');
+Route::get('/resumen/visor', 'ResumenController@index')->name('visor');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
