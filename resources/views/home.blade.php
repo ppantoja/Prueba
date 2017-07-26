@@ -96,18 +96,20 @@
             <i class="fa fa-dropbox" style="font-size: 10em;"></i><br>
             <span>Sistema de Almacén</span>
           </button>
-          <button class="btn btn-default fa-hover" title="Resumen Presupuestario">
+          <a href="{{Route('resumen')}}">
+           <button class="btn btn-default fa-hover" title="Resumen Presupuestario">
             <i class="fa fa-server " style="font-size: 10em;"></i><br>
             <span>Resumen Presupuestario</span>
           </button>
-          <button class="btn btn-default fa-hover" >
-            <i class="fa fa-server " style="font-size: 10em;" title="Credito/Traspaso Presupuestario"></i><br>
-            <span>Credito/Traspaso Presupuestario</span>
-          </button>
-        </div>
+        </a>
+        <button class="btn btn-default fa-hover" >
+          <i class="fa fa-server " style="font-size: 10em;" title="Credito/Traspaso Presupuestario"></i><br>
+          <span>Credito/Traspaso Presupuestario</span>
+        </button>
       </div>
     </div>
   </div>
+</div>
 </div>
 @endslot
 @endcomponent

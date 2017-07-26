@@ -25,3 +25,12 @@ Breadcrumbs::register('visor', function($breadcrumbs)
 	$breadcrumbs->parent('resumen');
     $breadcrumbs->push('Resumen Informativo', route('visor'));
 });
+
+
+//Plan Obras
+
+Breadcrumbs::register('planobras_index', function($breadcrumbs)
+{
+	$breadcrumbs->parent('resumen');
+    $breadcrumbs->push('Plan de Obras', route('planobras.index'));
+});

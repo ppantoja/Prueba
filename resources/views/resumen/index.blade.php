@@ -112,10 +112,12 @@
             <i class="fa fa-clock-o"  title="Registro de Fecha"></i><br>
             <span>Registro de Fecha e Info.</span>
           </button>
-          <button class="btn btn-default fa-hover" >
-            <i class="fa fa-university" title="Registro de Plan de 0bras"></i><br>
-            <span>Registro de Plan de 0bras</span>
-          </button>
+          <a href="{{Route('planobras.index')}}">
+            <button class="btn btn-default fa-hover" >
+              <i class="fa fa-university" title="Registro de Plan de 0bras"></i><br>
+              <span>Registro de Plan de 0bras</span>
+            </button>
+          </a>
           <button class="btn btn-default fa-hover" >
             <i class="fa fa-percent"  title="Financiamiento de Obras"></i><br>
             <span>Financiamiento de Obras</span>

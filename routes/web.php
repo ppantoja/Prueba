@@ -18,13 +18,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/resumen', 'HomeController@resumen')->name('resumen');
-Route::get('/resumen/visor', 'ResumenController@index')->name('visor');
+Route::get('resumen', 'HomeController@resumen')->name('resumen');
+//Route::get('/resumen/visor', 'ResumenController@index')->name('visor');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('planobras', 'PlanObraController');
