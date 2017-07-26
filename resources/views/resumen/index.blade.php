@@ -90,7 +90,7 @@
 
 <div class="container">
   <div class="row">
-    {{-- {!! Breadcrumbs::render('resumen') !!} --}}
+    {!! Breadcrumbs::render('resumen') !!}
   </div>
 </div>
 
