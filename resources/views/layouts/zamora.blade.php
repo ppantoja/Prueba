@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    Desarollado por Dirección de Tecnología y Sistemas Todos los derechos para la Coordinación de Desarollo © 2017
+                    Desarrollado por Dirección de Tecnología y Sistemas Todos los derechos para la Coordinación de Desarrollo © 2017
                 </div>
             </div>
         </div>
