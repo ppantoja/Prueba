@@ -23,6 +23,10 @@ class PlanObraController extends Controller
 	 	return view('resumen.planobras.index');
 	 }
 
+	 public function create(){
+	 	return view('resumen.planobras.create');
+	 }
+
 
 
 

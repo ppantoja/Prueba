@@ -129,54 +129,58 @@
 
       <div class="panel-heading">
         <ul>
-          <li>
+         @if(!Route('planobras.create'))
+         <li>
            <a href="{{ Route('planobras.create') }}">
             <i class="fa fa-plus"></i>
             Nuevo Proyecto
           </a>
         </li>
-        @if(!Route('planobras.index'))
-        <li class="active">
-          <a href="{{ Route('planobras.index') }}">
-            <i class="fa fa-list"></i>
-            Listado
-          </a>
-        </li>
         @endif
-        <li>
-          <a href="">
-            <i class="fa fa-list"></i>
-            Listado (Otros Años)
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="panel-body text-center">
 
-      <table class="table table-bordered table-striped table-hover table-condensed responsive" id="dataTable">
-        <thead>
-          <tr>
-            <th>Año</th>
-            <th>Nombre</th>
-            <th>Monto Asignado</th>
-            <th>Avance Físico</th>
-            <th>Avance Fínanciero</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <li class="active">
+         <a href="{{ Route('planobras.index') }}">
+          <i class="fa fa-list"></i>
+          Listado
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <i class="fa fa-list"></i>
+          Listado (Otros Años)
+        </a>
+      </li>
+    </ul>
   </div>
+  <div class="panel-body text-center">
+
+   Registro de Proyectos
+
+   <table class="table table-bordered table-striped table-hover table-condensed responsive" id="dataTable">
+    <thead>
+      <tr>
+        <th>Año</th>
+        <th>Nombre</th>
+        <th>Monto Asignado</th>
+        <th>Avance Físico</th>
+        <th>Avance Fínanciero</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prueba</td>
+        <td>Prueba</td>
+        <td>Prueba</td>
+        <td>Prueba</td>
+        <td>Prueba</td>
+        <td>Prueba</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
 </div>
 </div>
 

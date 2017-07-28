@@ -25,4 +25,6 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 
+
+//Plan Obras
 Route::resource('planobras', 'PlanObraController');
