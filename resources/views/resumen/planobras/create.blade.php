@@ -113,6 +113,17 @@
 @slot('content')
 @include('layouts.navbar')
 
+@if (count($errors) > 0)
+<div class="alert alert-danger">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li></li>
+    @endforeach
+  </ul>
+</div>
+@endif
+
+
 
 <div class="container">
   <div class="row">
@@ -125,7 +136,9 @@
 
   <div class="col-md-12">
     <div class="panel panel-default">
-      <div class="panel-heading">    Administración de Proyectos      </div>
+      <div class="panel-heading">
+        Administración de Proyectos  
+      </div>
 
       <div class="panel-heading">
         <ul>
@@ -153,32 +166,98 @@
       </li>
     </ul>
   </div>
-  <div class="panel-body text-center">
+  <div class="panel-body">
+    <div class="container-fluid">
+      <div class="row">
+       Registro de Proyectos
+       <hr>
+     </div>
+   </div>
+   <div class="container-fluid">
+     <div class="row">
+       {!! Form::open(['route' => 'planobras.store', 'class' => 'form-horizontal']) !!}
 
-   Registro de Proyectos
+       <div class="form-group">
+        {!!Form::label('nombre', 'Nombre del Proyecto', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-10">
+          {!!Form::text('nombre', null,['class' => 'form-control' , 'required' => 'required'])!!}
+        </div>
+      </div>
 
-   <table class="table table-bordered table-striped table-hover table-condensed responsive" id="dataTable">
-    <thead>
-      <tr>
-        <th>Año</th>
-        <th>Nombre</th>
-        <th>Monto Asignado</th>
-        <th>Avance Físico</th>
-        <th>Avance Fínanciero</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Prueba</td>
-        <td>Prueba</td>
-        <td>Prueba</td>
-        <td>Prueba</td>
-        <td>Prueba</td>
-        <td>Prueba</td>
-      </tr>
-    </tbody>
-  </table>
+      <div class="form-group">
+        {!!Form::label('fuente', 'Fuente de Financiamiento', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-2">
+          {!!Form::select('fuente', ['L' => 'Large', 'S' => 'Small'], null, ['class' => 'form-control'])!!}
+        </div>
+
+        {{Form::label('anio', 'Año del Proyecto', ['class' => 'control-label col-sm-2'])}}
+        <div class="col-sm-1">
+          {!!Form::text('anio', null, ['class' => 'form-control', 'required' => 'required'])!!}
+        </div>
+
+        {!!Form::label('monto', 'Monto Asignado', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-3">
+          {!!Form::text('monto', null, ['class' => 'form-control', 'required' => 'required'])!!}
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        {!!Form::label('sector', 'Sector Economico', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-2">
+          {!!Form::select('sector', ['L' => 'Large', 'S' => 'Small'], null, ['class' => 'form-control'])!!}
+        </div>
+
+        {!!Form::label('fisico', 'Porcentaje de Avance Físico', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-2">
+          <div class="input-group">
+            {!!Form::text('fisico', null, ['class' => 'form-control', 'required' => 'required'])!!}
+            <span class="input-group-addon" id="basic-addon1">%</span>
+          </div>
+        </div>
+
+        {!!Form::label('financiero', 'Porcentaje de Avance Fínanciero', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-2">
+          <div class="input-group">
+            {!!Form::text('financiero', null, ['class' => 'form-control', 'required' => 'required'])!!}
+            <span class="input-group-addon" id="basic-addon2">%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        {!!Form::label('beneficiados', 'Población Beneficiaria', ['class' => 'control-label col-sm-2'])!!}
+        <div class="col-sm-10">
+         {!! Form::textarea('beneficiados', null, ['class'=>'form-control', 'rows'=>5, 'required' => 'required'] ) !!}
+       </div>
+     </div>
+
+     <div class="form-group">
+       {!!Form::label('organos', 'Órganos o Entes Responsables', ['class' => 'control-label col-sm-2'])!!}
+       <div class="col-sm-4">
+        {!!Form::text('organos', null,['class' => 'form-control', 'required' => 'required'])!!}
+      </div>
+
+      {!!Form::label('municipios', 'Municipios Asociados', ['class' => 'control-label col-sm-2'])!!}
+      <div class="col-sm-4">
+        {!!Form::text('municipios', null,['class' => 'form-control', 'required' => 'required'])!!}
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      {!!Form::label('estado', 'Estado del Proyecto / Informativo', ['class' => 'control-label col-sm-2'])!!}
+      <div class="col-sm-10">
+       {!! Form::textarea('estado', null, ['class'=>'form-control', 'rows'=>5, 'required' => 'required'] ) !!}
+     </div>
+   </div>
+   <div class="form-group text-center">
+     {{Form::submit('Aceptar!', ['class'=>'btn btn-primary'])}}
+     {{Form::button('Cancelar!', ['class'=>'btn btn-danger'])}}
+   </div>
+   {!! Form::close() !!}
+ </div>
+</div>
 </div>
 </div>
 </div>

@@ -112,7 +112,7 @@
 
 @slot('content')
 @include('layouts.navbar')
-
+@include('alerts.alerts')
 
 <div class="container">
   <div class="row">
@@ -165,14 +165,29 @@
           </tr>
         </thead>
         <tbody>
+
+          @foreach($obras as $obra)
           <tr>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
-            <td>Prueba</td>
+            <td>{{ $obra->year }}</td>
+            <td>{{ $obra->nombre }}</td>
+            <td>{{ $obra->asignado }} Bs</td>
+            <td>{{ $obra->avance_fisico }} %</td>
+            <td>{{ $obra->avance_financiero }} %</td>
+            <td>
+              <button class="btn btn-default">
+                <i class="fa fa-edit"></i>
+              </button>
+              <button class="btn btn-default">
+                <i class="fa fa-trash"></i>
+              </button>
+              <button class="btn btn-default">
+                <i class="fa fa-eye"></i>
+              </button>
+            </td>
+
           </tr>
+
+          @endforeach
         </tbody>
       </table>
     </div>
@@ -180,12 +195,10 @@
 </div>
 </div>
 
-
-
+</script>
 @endslot
 
 @slot('scripts')
-
 
 <script type="text/javascript" src="{{ asset('js/jquery.dataTables.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>
@@ -195,8 +208,9 @@
   $(document).ready(function() {
     $('#dataTable').DataTable();
   } );
-</script>
 
+
+</script>
 
 @endslot
 @endcomponent
