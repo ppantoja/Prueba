@@ -15,9 +15,9 @@ class PlandeObras extends Model
      * @var array
      */
        protected $fillable = [
-       'sector_id', 'financiamiento_id', 'password', 'status', 'nombre', 'year', 'estado', 'beneficiados', 'asignado', 'avance_financiero', 'avance_fisico'
+       'sector_id', 'financiamiento_id', 'status', 'nombre', 'year', 'estado', 'beneficiados', 'asignado', 'avance_financiero', 'avance_fisico'
        ];
-       public $timestamps = false;
+      
     /**
      * The attributes that should be hidden for arrays.
      *

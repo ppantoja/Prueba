@@ -156,12 +156,12 @@
       <table class="table table-bordered table-striped table-hover table-condensed responsive" id="dataTable">
         <thead>
           <tr>
-            <th>Año</th>
-            <th>Nombre</th>
-            <th>Monto Asignado</th>
-            <th>Avance Físico</th>
-            <th>Avance Fínanciero</th>
-            <th>Acciones</th>
+            <th style="width: 10%">Año</th>
+            <th style="width: 45%">Nombre</th>
+            <th style="width: 10%" class="hidden-xs">Monto Asignado</th>
+            <th style="width: 10%" class="hidden-xs">Avance Físico</th>
+            <th style="width: 10%" class="hidden-xs">Avance Fínanciero</th>
+            <th style="width: 15%">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -170,9 +170,9 @@
           <tr>
             <td>{{ $obra->year }}</td>
             <td>{{ $obra->nombre }}</td>
-            <td>{{ $obra->asignado }} Bs</td>
-            <td>{{ $obra->avance_fisico }} %</td>
-            <td>{{ $obra->avance_financiero }} %</td>
+            <td class="hidden-xs">{{ $obra->asignado }} Bs</td>
+            <td class="hidden-xs">{{ $obra->avance_fisico }} %</td>
+            <td class="hidden-xs">{{ $obra->avance_financiero }} %</td>
             <td>
               <button class="btn btn-default">
                 <i class="fa fa-edit"></i>
